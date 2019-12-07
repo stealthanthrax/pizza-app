@@ -1,0 +1,74 @@
+.MenuPage {
+    margin-top: 20px;
+}
+
+.MenuPageLeft {
+    margin-top: 20px;
+    width: 40%;
+}
+
+.MenuPageRight {
+    margin-top: 20px;
+    padding-left: 20px;
+    width: 40%;
+}
+
+.MenuPageMiddle {
+    width: 10%;
+}
+
+
+.MenuPage h1 {
+    color: #303030;
+    font-style: italic;
+    font-size: 36px;
+    font-weight: 600;
+    padding-left: 12px;
+}
+
+.MenuPage p {
+    padding-left: 12px;   
+}
+
+.MenuPage button {
+    border: none;
+    background-color: #37af5a;
+    color: #fff;
+    border-radius: 10%;
+    height: 30px;
+}
+
+.MenuSortablePanel {
+    height: 42px;
+    margin: 20px 2px;
+    background-color: #fff;
+}
+
+.MenuSortablePanel select,
+.MenuSortablePanel p {
+    display: inline-block;
+    margin-right: 12px;
+}
+
+.DishesContainer {
+    margin: 24px 8px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.Division {
+    display: flex;
+    height: 400px;
+    overflow-y: scroll;
+}
+
+#left {
+    width: 100%;
+}
+
+#right {
+    width: 100%;
+    margin-left: 80px;
+}
