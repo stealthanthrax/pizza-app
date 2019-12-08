@@ -22,15 +22,6 @@ const DishDetails = (props) => {
         <img src={props.dish.img} alt="01"/>
       </div>
       <div className={classes.InfoContainer}>
-        <div className={classes.ChooseCountry}>
-          <span>Crusts to Choose from</span>
-          <div className={classes.InfoButton}>
-            <p>Thin 4-5мм.</p>
-          </div>
-          <div className={classes.InfoButton}>
-              <p>Classic Thick</p>
-          </div>
-        </div>
         <div className={classes.PurchaseInfoBlock}>
           <div className={classes.InfoCounter}>
             <div onClick={() => props.changeItemsNumber(0)}>
@@ -49,7 +40,6 @@ const DishDetails = (props) => {
             <span> ₹</span>
           </div>
         </div>
-        {props.ingredients ? <DishIngredients ingredients={props.ingredients}/> : null}
         {props.dish.nutrition ? <DishNutrition nutrition={props.dish.nutrition}/> : null}
       </div>
     </div>);
