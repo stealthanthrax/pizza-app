@@ -8,6 +8,7 @@ import HomePage from '../HomePage';
 import MenuPage from '../../containers/MenuPage';
 import DishPage from '../../containers/DishPage';
 import CheckoutPage from '../../containers/CheckoutPage';
+import SuccessfulPage from '../../containers/SuccessfulPage';
 import Footer from '../Footer';
 
 const Layout = () => (
@@ -18,6 +19,7 @@ const Layout = () => (
     <Route path='/menu/:dishCategory' component={MenuPage}/>
     <Route path='/dish/:category/:title' component={DishPage}/>
     <Route path='/checkout' component={CheckoutPage}/>
+    <Route path='/order-successful' component={SuccessfulPage}/>
     <Footer />
   </Aux>
 );

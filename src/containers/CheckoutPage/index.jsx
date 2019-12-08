@@ -1,13 +1,19 @@
 import React, {Component} from 'react';
+import axios from "./../../axios-delivery";
 
 import classes from './CheckoutPage.css';
 import Breadcrumbs from '../../components/UI/Breadcrumbs';
+import {Link} from "react-router-dom";
+
 
 export default class CheckoutPage extends Component {
 
   state = {
     order : window.sessionStorage.getItem("orders"),
-    isLoading: true
+    isLoading: true,
+    phoneNumber:'',
+    name:'',
+    address:''
   } 
 
 
@@ -17,6 +23,15 @@ export default class CheckoutPage extends Component {
     
   }
 
+  updateDB() {
+    window.sessionStorage.clear()
+    axios.post('https://pizza-app-backend.herokuapp.com/add_entry',{
+      number: this.state.phoneNumber,
+      order: this.state.order,
+      address: this.state.address
+    }
+    )
+  }
   
   render() {
     let dishesContent = window.sessionStorage.getItem("orders") ? window.sessionStorage.getItem("orders").split("*"): [","];
@@ -50,7 +65,7 @@ export default class CheckoutPage extends Component {
       <div>
         <Breadcrumbs/>
         <div className={classes.MenuPage} id={classes.left}>
-        <h1>Your Order. Total= {total}$</h1>  
+        <h1>Your Order. Total= {total}INR</h1>  
           <br />
           <p>{output.map((i,n)=><div key={n}>{i}</div>)}</p>
         </div>
@@ -63,14 +78,20 @@ export default class CheckoutPage extends Component {
         <h1>Enter your Details</h1>  
         <br />
           <label> Your Name :</label>
-          <input type="text" placeholder="Your Name"/>
+          <input type="text" placeholder="Your Name" onChange={event => this.setState({name:event.target.value})}/>
           <br/>
           <br/>
           <label>Phone Number</label>
-          <input type="Phone Number" placeholder="Phone Number"/>
+          <input type="Phone Number" placeholder="Phone Number" onChange={event => this.setState({phoneNumber:event.target.value})}/>
           <br/>
           <br/>
-          <button >Pay On Delivery</button>
+          <label>Delivery Address</label>
+          <input type="text" placeholder="Delivery Address" onChange={event => this.setState({address:event.target.value})}/>
+          <br/>
+          <br/>
+          <Link to="/order-successful" onClick={this.updateDB()}>
+            <button >Pay On Delivery</button>
+          </Link>
         </div>
       </div>
 

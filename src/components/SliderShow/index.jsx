@@ -7,13 +7,6 @@ class SliderShow extends Component {
     images: [
       '/img/slider/01.jpg',
       '/img/slider/02.jpg',
-      '/img/slider/03.jpg',
-      '/img/slider/04.jpg',
-      '/img/slider/05.jpg',
-      '/img/slider/06.jpg',
-      '/img/slider/07.jpg',
-      '/img/slider/08.jpg',
-      '/img/slider/09.jpg'
     ],
     slideNumber: 0,
     imgUrl: '/img/slider/01.jpg',

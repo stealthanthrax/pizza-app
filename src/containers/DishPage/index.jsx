@@ -79,7 +79,7 @@ export default class DishPage extends React.Component {
       dishContent = <div>Loading...</div> :
       dishContent = (
         <div className={classes.DishPage}>
-          <h1>{this.state.currentDish.title}</h1>
+          {/* <h1>{this.state.currentDish.title}</h1> */}
           <DishDetails
             dish={this.state.currentDish}
             ingredients={this.state.convertedIngredientArray}
