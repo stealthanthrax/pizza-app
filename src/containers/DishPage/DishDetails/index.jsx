@@ -5,10 +5,14 @@ import DishIngredients from './DishIngredients';
 import DishNutrition from './DishNutrition';
 
 const DishDetails = (props) => {
-  function addToCart(title,numberOfPieces,price,tt){
-//    console.log(title)
+  function addToCart(title,numberOfPieces,price){
+      alert("Added")
+//   console.log(title)
     let orders = window.sessionStorage.getItem("orders");
-    window.sessionStorage.setItem("orders",orders? orders+[["*",title,numberOfPieces,price,"custom"]]: [["*",title,numberOfPieces,price,"custom"]])
+    const app = ["*",title,numberOfPieces,price,"custom"];
+    console.log("DishDetails", app);
+    if(app)
+      window.sessionStorage.setItem("orders",orders? orders+[["*",title,numberOfPieces,price,"custom"]]: [["*",title,numberOfPieces,price,"custom"]])
   }
 
 
@@ -37,7 +41,7 @@ const DishDetails = (props) => {
               <span>+</span>
             </div>
           </div>
-          <div className={classes.OrderButton} onClick={addToCart(props.dish.title,props.itemsNumber,props.totalPrice)}>
+          <div className={classes.OrderButton} onClick={function() {addToCart(props.title,props.itemsNumber,props.totalPrice)}}>
             Add to Cart
           </div>
           <div className={classes.QuantityInfo}>

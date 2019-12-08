@@ -9,8 +9,9 @@ const DishCard = (props) => {
   }
 
   const addToCart = (numberOfPieces,title, price) =>{
-    let orders = window.sessionStorage.getItem("orders")
-    console.log(price)
+    let orders = window.sessionStorage.getItem("orders");
+    alert("Added");
+    console.log("Dishcard", ["*",title,numberOfPieces,price,"standard"]);
     window.sessionStorage.setItem("orders", orders ? orders+[["*",title,numberOfPieces,price,"standard"]]: [["*",title,numberOfPieces,price,"standard"]])
 
     console.log(props,["*",title,numberOfPieces,price,"standard"])

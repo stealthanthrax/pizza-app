@@ -24,7 +24,6 @@ export default class CheckoutPage extends Component {
   }
 
   updateDB() {
-    window.sessionStorage.clear()
     axios.post('https://pizza-app-backend.herokuapp.com/add_entry',{
       number: this.state.phoneNumber,
       order: this.state.order,
@@ -65,9 +64,10 @@ export default class CheckoutPage extends Component {
       <div>
         <Breadcrumbs/>
         <div className={classes.MenuPage} id={classes.left}>
-        <h1>Your Order. Total= {total}₹</h1>  
+        <h1>Your Order. Total= {isNaN(total)?0:total}₹</h1>  
           <br />
-          <p>{output.map((i,n)=><div key={n}>{i}</div>)}</p>
+          
+            <p>{isNaN(total)?<div></div> :output.map((i,n)=><div key={n}>{i}</div>)}</p>
         </div>
       </div>
 

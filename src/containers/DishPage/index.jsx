@@ -57,7 +57,7 @@ export default class DishPage extends React.Component {
     let localTitle = this.state.currentTitle;
     let ingredientArray = [];
     let composedUrl = `https://food-delivery-react.firebaseio.com/dishes/${localCategory}/${localTitle}.json`;
-    console.log(localCategory,localTitle)
+    // console.log(localCategory,localTitle)
     axios.get(composedUrl)
       .then(response => {
         this.setState({currentDish: response.data});
@@ -66,7 +66,7 @@ export default class DishPage extends React.Component {
         });
         this.setState({isLoading: false});
         this.setState({convertedIngredientArray: ingredientArray});
-        console.log(ingredientArray)
+        // console.log(ingredientArray)
       })
       .catch( error => {
         console.log(error);
@@ -75,17 +75,19 @@ export default class DishPage extends React.Component {
 
   render() {
     let dishContent = null;
+    // console.log(this.props.match.params.title)
     this.state.isLoading ?
       dishContent = <div>Loading...</div> :
       dishContent = (
         <div className={classes.DishPage}>
-          {/* <h1>{this.state.currentDish.title}</h1> */}
+          <h1>{this.props.match.params.title}</h1>
           <DishDetails
             dish={this.state.currentDish}
             ingredients={this.state.convertedIngredientArray}
             itemsNumber={this.state.numberOfItems}
             totalPrice={this.state.totalPrice}
             changeItemsNumber={this.changeNumberOfItems}
+            title={this.props.match.params.title}
           />
         </div>
       );
