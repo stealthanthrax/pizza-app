@@ -65,7 +65,7 @@ export default class CheckoutPage extends Component {
       <div>
         <Breadcrumbs/>
         <div className={classes.MenuPage} id={classes.left}>
-        <h1>Your Order. Total= {total}INR</h1>  
+        <h1>Your Order. Total= {total}₹</h1>  
           <br />
           <p>{output.map((i,n)=><div key={n}>{i}</div>)}</p>
         </div>

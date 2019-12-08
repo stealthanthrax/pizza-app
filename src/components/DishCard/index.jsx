@@ -28,7 +28,7 @@ const DishCard = (props) => {
         </Link>
         {props.dishContent.numberOfPieces ? <p>{props.dishContent.numberOfPieces} Pieces</p> : ''}
         <div className={classes.DishAction}>
-          <p>{props.dishContent.price} INR</p>
+          <p>{props.dishContent.price} ₹</p>
           <button onClick={function(){ addToCart(props.dishContent.numberOfPieces,props.dishContent.title,props.dishContent.price)} }>Add to Cart</button>
         </div>
         <p className={classes.DishDescription}>

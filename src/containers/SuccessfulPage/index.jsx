@@ -5,7 +5,9 @@ import Breadcrumbs from '../../components/UI/Breadcrumbs';
 
 export default class CheckoutPage extends Component {
 
-
+  componentDidMount() {
+    window.sessionStorage.clear()
+  }
 
   
   render() {

@@ -12,12 +12,12 @@ const InfoHeaderCentral = () => (
       </div>
       <div className={classes.InfoDelivery}>
         <p className={classes.StrongText}>Free Shipping</p>
-        <p className={classes.ItalicText}>From 20 INR</p>
+        <p className={classes.ItalicText}>From 20 ₹</p>
       </div>
       <div className={classes.InfoMinimal}>
         <p className={classes.StrongText}>Minimu Order</p>
-        <p className={classes.ItalicText}>By Kitchen − 12 INR</p>
-        <p className={classes.ItalicText}>By Bar − 15 INR</p>
+        <p className={classes.ItalicText}>By Kitchen − 12 ₹</p>
+        <p className={classes.ItalicText}>By Bar − 15 ₹</p>
       </div>
       <div className={classes.InfoPhones}>
         <div>(048) 781-9-555</div>

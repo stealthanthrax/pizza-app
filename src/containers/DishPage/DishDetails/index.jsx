@@ -42,7 +42,7 @@ const DishDetails = (props) => {
           </div>
           <div className={classes.QuantityInfo}>
             <span>{props.totalPrice}</span>
-            <span> INR</span>
+            <span> ₹</span>
           </div>
         </div>
         {props.ingredients ? <DishIngredients ingredients={props.ingredients}/> : null}
