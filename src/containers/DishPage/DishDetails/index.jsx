@@ -24,12 +24,12 @@ const DishDetails = (props) => {
       <div className={classes.InfoContainer}>
         <div className={classes.ChooseCountry}>
           <span>Crusts to Choose from</span>
-          <button className={classes.InfoButton}>
+          <div className={classes.InfoButton}>
             <p>Thin 4-5мм.</p>
-          </button>
-          <button className={classes.InfoButton}>
+          </div>
+          <div className={classes.InfoButton}>
               <p>Classic Thick</p>
-          </button>
+          </div>
         </div>
         <div className={classes.PurchaseInfoBlock}>
           <div className={classes.InfoCounter}>

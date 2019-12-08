@@ -17,7 +17,7 @@ const Footer = () => (
     <div className={classes.FooterMenu}>
       <a href="/">About Us</a>
       <a href="/">Payments and Delivery</a>
-      <a href="/">Contact</a>
+      <a href="https://sanskar.me">Contact</a>
       <a></a>
       <a></a>
       <a></a>
@@ -25,8 +25,8 @@ const Footer = () => (
     </div>
     <div className={classes.FooterInfo}>
       <p>24 hour food Delivery</p>
-      <p>Free Delivery from 20$</p>
-      <p>Minimum Order 20$</p>
+      <p>Free Delivery from 20₹</p>
+      <p>Minimum Order 20₹</p>
     </div>
   </div>
 );

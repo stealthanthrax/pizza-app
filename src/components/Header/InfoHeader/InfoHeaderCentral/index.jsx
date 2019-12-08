@@ -15,7 +15,7 @@ const InfoHeaderCentral = () => (
         <p className={classes.ItalicText}>From 20 ₹</p>
       </div>
       <div className={classes.InfoMinimal}>
-        <p className={classes.StrongText}>Minimu Order</p>
+        <p className={classes.StrongText}>Minimum Order</p>
         <p className={classes.ItalicText}>By Kitchen − 12 ₹</p>
         <p className={classes.ItalicText}>By Bar − 15 ₹</p>
       </div>
